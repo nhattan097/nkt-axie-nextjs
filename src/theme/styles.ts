@@ -1,6 +1,7 @@
 import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
 import { Dict } from '@chakra-ui/utils';
 import typography from './foundations/typography';
+import { fonts } from './foundations/fonts';
 
 export const globalStyles = {
   colors: {
@@ -11,9 +12,8 @@ export const globalStyles = {
 
     number: '#11142D',
   },
-  fontSizes: {
-    ...typography.fontSizes,
-  },
+  fontSizes: typography.fontSizes,
+  fonts,
   styles: {
     global: (props: Dict<any> | StyleFunctionProps) => ({
       body: {

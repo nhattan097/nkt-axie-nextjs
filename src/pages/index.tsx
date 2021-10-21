@@ -9,6 +9,10 @@ import {
   Image,
   Button,
   HStack,
+  Center,
+  Badge,
+  Grid,
+  chakra,
 } from '@chakra-ui/react';
 import {
   IoLogoDiscord,
@@ -32,7 +36,7 @@ export default function Home() {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -41,14 +45,14 @@ export default function Home() {
         <Flex>
           <Box py="50px" px="80px" w="full">
             <Flex alignItems="center" justifyContent="space-between" mb="130px">
-              <Image src="/svg/logo.svg" w="150px" h="40px" />
+              <Image alt="" src="/img/logo/nkt-logo.png" w="150px" h="40px" />
               <Box>
                 <Icon mr="6" w={6} h={6} as={IoLogoDiscord} />
                 <Icon mr="6" w={6} h={6} as={IoLogoTwitter} />
                 <Icon w={6} h={6} as={IoLogoYoutube} />
               </Box>
             </Flex>
-            <Heading fontSize="4xl" mb="60px">
+            <Heading fontSize="4xl" mb="60px" fontWeight="semibold">
               An NFT is a unit of data stored on a digital ledger
             </Heading>
             <Flex borderRadius="24px" bg="white" maxW="505px" mb="64px">
@@ -77,6 +81,7 @@ export default function Home() {
               <Box px="20px" py="30px" flex="1" borderX="1px solid #E4E4E4">
                 <Flex align="center" justify="start" mb="4">
                   <Image
+                    alt=""
                     src="/svg/message-unread.svg"
                     w="16px"
                     height="16px"
@@ -114,21 +119,162 @@ export default function Home() {
               </Box>
             </Flex>
             <HStack maxW="505px" spacing="16px" mb="155px">
-              <Button h="16" color="white" bg="primaryDark" flex="1">
+              <Button
+                borderRadius="2xl"
+                h="16"
+                color="white"
+                bg="primaryDark"
+                flex="1"
+              >
                 Apply Now
               </Button>
-              <Button h="16" border="1px" borderColor="primaryDark" flex="1">
+              <Button
+                borderRadius="2xl"
+                h="16"
+                border="1px"
+                borderColor="primaryDark"
+                flex="1"
+              >
                 Login
               </Button>
             </HStack>
             <HStack spacing="40px">
-              <Image src="/img/axie-logo.png" />
-              <Image src="/img/gala-logo.png" />
-              <Image src="/img/treeverse-logo.png" />
+              <Image w="76px" alt="" src="/img/logo/axie-logo.png" />
+              <Image w="61px" alt="" src="/img/logo/gala-logo.png" />
+              <Image w="120px" alt="" src="/img/logo/treeverse-logo.png" />
             </HStack>
           </Box>
-          <Box py="50px" px="80px" w="full" bg="primaryDark" color="white">
-            Right
+          <Box
+            position="relative"
+            py="50px"
+            px="80px"
+            w="full"
+            bg="primaryDark"
+            color="white"
+          >
+            <Image
+              position="absolute"
+              left="140px"
+              top="52px"
+              alt=""
+              src="/img/thunder-ball.png"
+            />
+            <Image
+              position="absolute"
+              right="85px"
+              top="138px"
+              alt=""
+              src="/img/heart-ball.png"
+            />
+            <Image
+              position="absolute"
+              left="178px"
+              bottom="186px"
+              alt=""
+              src="/img/fire-ball.png"
+            />
+            <Image
+              position="absolute"
+              right="152px"
+              bottom="136px"
+              alt=""
+              src="/img/star-ball.png"
+              zIndex="1"
+            />
+            <Image
+              position="absolute"
+              top="228px"
+              left="28px"
+              alt=""
+              src="/img/dot-bg.png"
+            />
+            <Image
+              position="absolute"
+              top="0"
+              right="56px"
+              alt=""
+              src="/img/triangle-bg.png"
+            />
+            <Image
+              position="absolute"
+              bottom="0"
+              right="0"
+              alt=""
+              src="/img/rectangle-bg.png"
+            />
+            <Box>
+              <Center mt="132px" flexDirection="column">
+                <Heading fontSize="2xl" mb="48px" fontWeight="bold">
+                  Best Team of the month
+                </Heading>
+                <Text mb="40px">Jessie (G11)</Text>
+                <Grid templateColumns="repeat(3, 176px)" gap="18px" zIndex="1">
+                  <Box
+                    px="4"
+                    py="6"
+                    bg="secondDark"
+                    borderRadius="md"
+                    border="1px"
+                    borderColor="#585B67"
+                    maxH="265px"
+                  >
+                    <Badge mb="16px" bg="#FFAF13" color="white">
+                      #672920
+                    </Badge>
+                    <Text mb="8">NKT-G #672920</Text>
+                    <Image
+                      w="106px"
+                      m="auto"
+                      alt=""
+                      src="/img/axie/axie-yellow.png"
+                    />
+                    <Image m="auto" alt="" src="/img/axie/shadow-axie.png" />
+                  </Box>
+                  <Box
+                    px="4"
+                    py="6"
+                    bg="secondDark"
+                    borderRadius="md"
+                    border="1px"
+                    borderColor="#585B67"
+                    maxH="265px"
+                  >
+                    <Badge mb="16px" bg="#00AFC7" color="white">
+                      #672920
+                    </Badge>
+                    <Text mb="8">NKT-G #690258</Text>
+                    <Image
+                      w="106px"
+                      m="auto"
+                      alt=""
+                      src="/img/axie/axie-blue.png"
+                    />
+                    <Image m="auto" alt="" src="/img/axie/shadow-axie.png" />
+                  </Box>
+                  <Box
+                    px="4"
+                    py="6"
+                    bg="secondDark"
+                    borderRadius="md"
+                    border="1px"
+                    borderColor="#585B67"
+                    maxH="265px"
+                  >
+                    <Badge mb="16px" bg="#80BD39" color="white">
+                      #672920
+                    </Badge>
+                    <Text mb="8">NKT-G #683790</Text>
+                    <Image
+                      w="106px"
+                      m="auto"
+                      alt=""
+                      src="/img/axie/axie-green.png"
+                    />
+                    <Image m="auto" alt="" src="/img/axie/shadow-axie.png" />
+                  </Box>
+                </Grid>
+              </Center>
+            </Box>
           </Box>
         </Flex>
       </main>

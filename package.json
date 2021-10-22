@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-types": "tsc --noemit",
+    "test-build": "yarn lint & yarn check-types"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
@@ -16,7 +18,8 @@
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "swiper": "^7.0.9"
   },
   "devDependencies": {
     "@types/react": "^17.0.30",

@@ -1,3 +1,5 @@
+import { AxsSVG, EthSVG, SlpSVG } from '~/assets/svg';
+
 export const best_players = {
   players: [
     {
@@ -97,3 +99,30 @@ export const best_team = {
     },
   ],
 };
+
+export const coins = [
+  {
+    id: 1,
+    name: 'AXS',
+    dont_know: '62.12',
+    earn: '~1.2345 $',
+    profit: '+1.3%',
+    icon: AxsSVG,
+  },
+  {
+    id: 2,
+    name: 'SLP',
+    dont_know: '62.12',
+    earn: '~1.2345 $',
+    profit: '+1.3%',
+    icon: SlpSVG,
+  },
+  {
+    id: 3,
+    name: 'ETH',
+    dont_know: '62.12',
+    earn: '~1.2345 $',
+    profit: '+1.3%',
+    icon: EthSVG,
+  },
+];

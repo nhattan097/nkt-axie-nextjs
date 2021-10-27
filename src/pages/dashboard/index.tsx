@@ -3,6 +3,7 @@ import {
   SimpleGrid,
   Text,
   HStack,
+  VStack,
   Flex,
   Stack,
   Image,
@@ -21,11 +22,14 @@ import {
 } from '@chakra-ui/react';
 import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
 
-import CardCoin from '~/components/CardCoin';
+import CardCoin from '~/components/Dashboard/CardCoin';
+import CardBgTotal from '~/components/Dashboard/CardBgTotal';
 import Layout from '~/components/Layout';
 import { coins } from '~/data/sample';
 import tabs from '~/data/tabs';
 import { Coin } from '~/interfaces/coin';
+import TitleCard from '~/components/Dashboard/TitleCard';
+import NumberCard from '~/components/Dashboard/NumberCard';
 
 const Dashboard = () => {
   return (
@@ -97,25 +101,145 @@ const Dashboard = () => {
                     gridTemplateColumns={{
                       base: '1fr 1fr 1fr',
                     }}
+                    gridTemplateRows={{
+                      base: '1fr 1fr',
+                    }}
                     gridTemplateAreas={{
                       base: `'total scholar slp_average' 'total top_5 worst_5'`,
                     }}
                     gap={4}
+                    lineHeight="none"
                   >
-                    <Box
+                    <CardBgTotal
                       borderRadius="2xl"
                       h="416px"
                       gridArea="total"
                       bg="primaryDark"
-                    ></Box>
-                    <Box borderRadius="2xl" gridArea="scholar" bg="white"></Box>
+                      px="8"
+                      pt="16"
+                      pb="10"
+                      position="relative"
+                    >
+                      <Flex h="full" direction="column" justify="space-between">
+                        <Box>
+                          <TitleCard>Total SLP</TitleCard>
+                          <NumberCard mb="3" color="white">
+                            1,234.00
+                          </NumberCard>
+                          <Text color="#D3D4D6" fontSize="sm">
+                            ~1,123.00 USD
+                          </Text>
+                        </Box>
+                        <Stack spacing="3">
+                          <Text color="#2BB596" fontSize="sm">
+                            + 234.00 USD
+                          </Text>
+                          <Text color="#2BB596" fontSize="sm">
+                            ↑ 39.69%
+                          </Text>
+                        </Stack>
+                      </Flex>
+                    </CardBgTotal>
                     <Box
+                      gridArea="scholar"
+                      bg="white"
+                      position="relative"
                       borderRadius="2xl"
+                    >
+                      <Image
+                        position="absolute"
+                        alt=""
+                        src="/svg/mask-profile.svg"
+                        borderRadius="2xl"
+                        h="100%"
+                      />
+                      <Box pt="10" px="8" pb="5" h="full">
+                        <TitleCard>Scholar</TitleCard>
+                        <NumberCard>101</NumberCard>
+                      </Box>
+                    </Box>
+                    <Box
                       gridArea="slp_average"
                       bg="white"
-                    ></Box>
-                    <Box borderRadius="2xl" gridArea="top_5" bg="white"></Box>
-                    <Box borderRadius="2xl" gridArea="worst_5" bg="white"></Box>
+                      position="relative"
+                      borderRadius="2xl"
+                    >
+                      <Image
+                        position="absolute"
+                        alt=""
+                        src="/svg/mask-coin.svg"
+                        borderRadius="2xl"
+                        h="100%"
+                      />
+                      <Box pt="10" px="8" pb="5" h="full">
+                        <TitleCard>SLP average</TitleCard>
+                        <NumberCard mb="3">150</NumberCard>
+                        <Text color="#7C7D85" fontSize="sm">
+                          ~1,123.00 USD
+                        </Text>
+                      </Box>
+                    </Box>
+                    <Box borderRadius="2xl" gridArea="top_5" bg="white">
+                      <Box pt="10" px="8" pb="5" h="full">
+                        <TitleCard>Top 5 average</TitleCard>
+                        <Flex justify="space-between">
+                          <Box>
+                            <NumberCard mb="3">210</NumberCard>
+                            <Text color="#7C7D85" fontSize="sm">
+                              ~1,123.00 USD
+                            </Text>
+                          </Box>
+                          <Box>
+                            <VStack align="flex-end" spacing="1">
+                              <Text fontSize="xs" color="#7C7D85">
+                                Adrian (G01)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Jaycee (G02)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Mich (G03)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Charlene (G04)
+                              </Text>
+                            </VStack>
+                          </Box>
+                        </Flex>
+                      </Box>
+                    </Box>
+                    <Box borderRadius="2xl" gridArea="worst_5" bg="white">
+                      <Box pt="10" px="8" pb="5" h="full">
+                        <TitleCard>Worst 5 average</TitleCard>
+                        <Flex justify="space-between">
+                          <Box>
+                            <NumberCard mb="3">75</NumberCard>
+                            <Text color="#7C7D85" fontSize="sm">
+                              ~1,123.00 USD
+                            </Text>
+                          </Box>
+                          <Box>
+                            <VStack align="flex-end" spacing="1">
+                              <Text fontSize="xs" color="#7C7D85">
+                                Noel (G37)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Enxzow (G38)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Meraki (G39)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Jiger (G40)
+                              </Text>
+                              <Text fontSize="xs" color="#7C7D85">
+                                Nelie (G41)
+                              </Text>
+                            </VStack>
+                          </Box>
+                        </Flex>
+                      </Box>
+                    </Box>
                   </Grid>
                 </TabPanel>
                 <TabPanel>

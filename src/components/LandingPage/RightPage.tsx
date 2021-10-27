@@ -4,8 +4,8 @@ import SwiperCore, { Pagination } from 'swiper';
 
 import { Pet } from '~/interfaces/pet';
 import { Player } from '~/interfaces/player';
-import CardPlayer from '~/components/CardPlayer';
-import CardAxie from '~/components/CardAxie';
+import CardPlayer from '~/components/LandingPage/CardPlayer';
+import CardAxie from '~/components/LandingPage/CardAxie';
 import { best_players, best_team } from '~/data/sample';
 
 // install Swiper modules

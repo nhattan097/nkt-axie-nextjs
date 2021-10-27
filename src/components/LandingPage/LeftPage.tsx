@@ -16,6 +16,8 @@ import {
   IoStatsChart,
 } from 'react-icons/io5';
 
+import Link from 'next/link';
+
 const LeftPage = () => {
   return (
     <Box py="50px" px="80px" w="half">
@@ -119,16 +121,18 @@ const LeftPage = () => {
         >
           Apply Now
         </Button>
-        <Button
-          borderRadius="2xl"
-          h="16"
-          border="1px"
-          borderColor="primaryDark"
-          flex="1"
-          bg="transparent"
-        >
-          Login
-        </Button>
+        <Link href="/dashboard" passHref>
+          <Button
+            borderRadius="2xl"
+            h="16"
+            border="1px"
+            borderColor="primaryDark"
+            flex="1"
+            bg="transparent"
+          >
+            Login
+          </Button>
+        </Link>
       </HStack>
       <HStack spacing="40px">
         <Image w="76px" alt="" src="/img/logo/axie-logo.png" />

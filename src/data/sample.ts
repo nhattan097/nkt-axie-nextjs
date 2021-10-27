@@ -126,3 +126,30 @@ export const coins = [
     icon: EthSVG,
   },
 ];
+
+export const eggs = [
+  {
+    id: 1,
+    name: 'Total',
+    dont_know: '62.12',
+    earn: '~1.2345 $',
+    profit: '+1.3%',
+    icon: AxsSVG,
+  },
+  {
+    id: 2,
+    name: 'Egg',
+    dont_know: '62.12',
+    earn: '~1.2345 $',
+    profit: '+1.3%',
+    icon: SlpSVG,
+  },
+  {
+    id: 3,
+    name: 'Ready to hatch',
+    dont_know: '62.12',
+    earn: '~1.2345 $',
+    profit: '+1.3%',
+    icon: EthSVG,
+  },
+];

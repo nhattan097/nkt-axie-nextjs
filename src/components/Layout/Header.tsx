@@ -12,6 +12,7 @@ import {
   MenuItem,
 } from '@chakra-ui/react';
 import { IoCaretDown, IoExit, IoPersonSharp } from 'react-icons/io5';
+import Link from 'next/link';
 
 const Header = () => {
   const { pathname } = useRouter();
@@ -28,6 +29,7 @@ const Header = () => {
               <Text lineHeight="none" fontSize="sm" fontWeight="bold">
                 Metamask
               </Text>
+
               <Text lineHeight="none" fontSize="sm" color="#42474DCC">
                 0xe0B3...6ae5
               </Text>
@@ -45,9 +47,12 @@ const Header = () => {
               <MenuItem icon={<IoPersonSharp />} command="⌘P">
                 Profile
               </MenuItem>
-              <MenuItem icon={<IoExit />} command="⌘E">
-                Exit
-              </MenuItem>
+
+              <Link href="/" passHref>
+                <MenuItem icon={<IoExit />} command="⌘E">
+                  Exit
+                </MenuItem>
+              </Link>
             </MenuList>
           </Menu>
         </Flex>

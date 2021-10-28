@@ -5,7 +5,7 @@ import Header from './Header';
 import Logo from './Logo';
 import Sidebar from './Sidebar';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, name }) => {
   return (
     <Box>
       <Grid
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
         gap="none"
       >
         <Logo />
-        <Header />
+        <Header name={name} />
         <Sidebar />
         <Content>{children}</Content>
       </Grid>

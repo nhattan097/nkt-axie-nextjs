@@ -3,6 +3,7 @@ import { globalStyles } from './styles';
 import { breakpoints } from './foundations/breakpoints';
 import { badgeStyles } from './components/badge';
 import { linkStyles } from './components/link';
+import { buttonStyles } from './components/button';
 import { drawerStyles } from './components/drawer';
 import { CardComponent } from './additions/card/Card';
 import { CardBodyComponent } from './additions/card/CardBody';
@@ -16,6 +17,7 @@ export default extendTheme(
   globalStyles, // Global styles
   badgeStyles, // Badge styles
   linkStyles, // Link styles
+  buttonStyles, // Link styles
   drawerStyles, // Sidebar variant for Chakra's drawer
   CardComponent, // Card component
   CardBodyComponent, // Card Body component

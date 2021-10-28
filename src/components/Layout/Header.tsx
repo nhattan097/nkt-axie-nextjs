@@ -13,21 +13,18 @@ import {
 } from '@chakra-ui/react';
 import { IoCaretDown, IoExit, IoPersonSharp } from 'react-icons/io5';
 import Link from 'next/link';
+import routes from '~/data/routes';
 
 const Header = ({ name }) => {
   const { pathname } = useRouter();
+  const title = routes.find((route) => route.url === pathname).title;
+
   return (
     <Box m="auto 0" px="16" gridArea="header">
       <Flex justify="space-between">
-        {
-          name ? (
-            <Text fontWeight="bold" fontSize="3xl">
-              {name}
-            </Text>
-          ) : (
-            <Box></Box>
-          )
-        }
+        <Text fontWeight="bold" fontSize="3xl">
+          {title}
+        </Text>
         <Flex align="center">
           <Avatar w="42px" h="42px" mr="4" />
           <Box mr="2">

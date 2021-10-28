@@ -148,6 +148,7 @@ const Dashboard = () => {
                     >
                       <Image
                         position="absolute"
+                        right="0"
                         alt=""
                         src="/svg/mask-profile.svg"
                         borderRadius="2xl"
@@ -166,6 +167,7 @@ const Dashboard = () => {
                     >
                       <Image
                         position="absolute"
+                        right="0"
                         alt=""
                         src="/svg/mask-coin.svg"
                         borderRadius="2xl"

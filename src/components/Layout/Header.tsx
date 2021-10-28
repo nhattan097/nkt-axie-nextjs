@@ -14,14 +14,20 @@ import {
 import { IoCaretDown, IoExit, IoPersonSharp } from 'react-icons/io5';
 import Link from 'next/link';
 
-const Header = () => {
+const Header = ({ name }) => {
   const { pathname } = useRouter();
   return (
     <Box m="auto 0" px="16" gridArea="header">
       <Flex justify="space-between">
-        <Text fontWeight="bold" fontSize="3xl">
-          Manager Data
-        </Text>
+        {
+          name ? (
+            <Text fontWeight="bold" fontSize="3xl">
+              {name}
+            </Text>
+          ) : (
+            <Box></Box>
+          )
+        }
         <Flex align="center">
           <Avatar w="42px" h="42px" mr="4" />
           <Box mr="2">

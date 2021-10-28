@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 const Content = ({ children }) => {
   const { pathname } = useRouter();
   return (
-    <Box px="16" pb="16" gridArea="content">
+    <Box px="16" pb="10" gridArea="content">
       {children}
     </Box>
   );

@@ -98,6 +98,44 @@ const Axie = () => {
 
   return (
     <Layout>
+      <SimpleGrid spacing="6" columns={3} mb="24px">
+        <Box bg="white" px={8} py={6} borderRadius="16px">
+          <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="24px">
+            Total
+          </Text>
+          <Stack justify="space-between" direction="row" align="flex-end">
+            <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
+              101
+            </Text>
+          </Stack>
+        </Box>
+        <Box bg="white" px={8} py={6} borderRadius="16px">
+          <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="24px">
+            Egg
+          </Text>
+          <Stack justify="space-between" direction="row" align="flex-end">
+            <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
+              10
+            </Text>
+            <Stack>
+              <Text fontSize="xs" color="yellow">#210520</Text>
+            </Stack>
+          </Stack>
+        </Box>
+        <Box bg="white" px={8} py={6} borderRadius="16px">
+          <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="24px">
+            Ready to hatch
+          </Text>
+          <Stack justify="space-between" direction="row" align="flex-end">
+            <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
+              3
+            </Text>
+            <Stack>
+              <Text fontSize="xs" color="yellow">#210520</Text>
+            </Stack>
+          </Stack>
+        </Box>
+      </SimpleGrid>
       <Flex
         bg="white"
         borderRadius="3xl"
@@ -142,8 +180,10 @@ const Axie = () => {
                   w="50%"
                   mb="8px"
                 >
-                  <Image src={item.icon} />
-                  <Text fontSize="sm">{item.name}</Text>
+                  <HStack>
+                    <Image src={item.icon} />
+                    <Text fontSize="sm">{item.name}</Text>
+                  </HStack>
                 </Checkbox>
               ))
             }

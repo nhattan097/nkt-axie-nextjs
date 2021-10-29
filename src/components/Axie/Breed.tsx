@@ -8,7 +8,7 @@ import {
 
 const Breed = () => {
   const [value, setValue] = useState(1);
-  
+
   return (
     <Box position="relative" overflow="hidden" h={20} pt="5px">
       <Divider borderColor="border" borderWidth={2} />
@@ -20,7 +20,7 @@ const Breed = () => {
       >
         {
           [1,2,3,4,5,6,7].map(item => (
-            <Box>
+            <Box key={item}>
               <Box
                 w="10px"
                 h="10px"

@@ -109,7 +109,7 @@ const Filter = () => {
               mb="8px"
             >
               <HStack>
-                <Image src={item.icon} />
+                <Image src={item.icon} alt="" />
                 <Text fontSize="sm">{item.name}</Text>
               </HStack>
             </Checkbox>
@@ -148,7 +148,7 @@ const Filter = () => {
         >
           Breed
         </Text>
-        <Breed min={1} max={7} />
+        <Breed />
       </Box>
     </Box>
   )

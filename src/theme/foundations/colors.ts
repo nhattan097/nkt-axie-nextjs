@@ -12,7 +12,8 @@ const colors = {
   lightPurple: 'rgba(98, 65, 187, 0.1)',
   brown: '#B34540',
   lightBrown: 'rgba(179, 69, 64, 0.1)',
-  secondaryText: 'rgba(37, 39, 52, 0.6)'
+  secondaryText: 'rgba(37, 39, 52, 0.6)',
+  border: '#B7B9BD'
 };
 
 export default colors;

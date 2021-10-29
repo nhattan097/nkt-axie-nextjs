@@ -264,3 +264,28 @@ export const data_table = [
     clam: '02-03-2021',
   },
 ];
+
+export const axies = [
+  {
+    id: '#210520',
+    name: 'Rimp Beast',
+    image: '/img/axie/axie-yellow.png',
+    attributes: [40, 56, 60, 90],
+    team: 'Jamac(K01)',
+    breedCount: '4/7',
+    text: 100,
+    axieClass: 'beast',
+    stage: 1
+  },
+  {
+    id: '#210520',
+    name: 'TC #544426',
+    image: '/img/axie/axie-blue.png',
+    attributes: [40, 56, 60, 90],
+    team: 'Jamac(K01)',
+    breedCount: '4/7',
+    text: 100,
+    axieClass: 'aquatic',
+    stage: 1
+  }
+];

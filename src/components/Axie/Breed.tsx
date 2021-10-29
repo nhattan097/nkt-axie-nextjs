@@ -7,7 +7,8 @@ import {
 } from '@chakra-ui/react';
 
 const Breed = () => {
-  const [value, setValue] = useState(1)
+  const [value, setValue] = useState(1);
+  
   return (
     <Box position="relative" overflow="hidden" h={20} pt="5px">
       <Divider borderColor="border" borderWidth={2} />

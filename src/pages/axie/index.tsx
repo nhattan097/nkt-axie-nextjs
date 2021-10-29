@@ -114,9 +114,14 @@ const Axie = () => {
             Egg
           </Text>
           <Stack justify="space-between" direction="row" align="flex-end">
-            <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
-              10
-            </Text>
+            <Stack justify="space-between" direction="row" align="flex-end">
+              <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
+                10
+              </Text>
+              <Text fontSize="sm" color="green">
+                +1
+              </Text>
+            </Stack>
             <Stack>
               <Text fontSize="xs" color="yellow">#210520</Text>
             </Stack>
@@ -127,9 +132,14 @@ const Axie = () => {
             Ready to hatch
           </Text>
           <Stack justify="space-between" direction="row" align="flex-end">
-            <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
-              3
-            </Text>
+            <Stack justify="space-between" direction="row" align="flex-end">
+              <Text fontSize="5xl" fontWeight="bold" lineHeight={1}>
+                3
+              </Text>
+              <Text fontSize="sm" color="green">
+                +2
+              </Text>
+            </Stack>
             <Stack>
               <Text fontSize="xs" color="yellow">#210520</Text>
             </Stack>

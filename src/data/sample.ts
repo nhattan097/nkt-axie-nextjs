@@ -275,10 +275,10 @@ export const axies = [
     breedCount: '4/7',
     text: 100,
     axieClass: 'beast',
-    stage: 1
+    stage: 1,
   },
   {
-    id: '#210520',
+    id: '#210521',
     name: 'TC #544426',
     image: '/img/axie/axie-blue.png',
     attributes: [40, 56, 60, 90],
@@ -286,6 +286,28 @@ export const axies = [
     breedCount: '4/7',
     text: 100,
     axieClass: 'aquatic',
-    stage: 1
-  }
+    stage: 1,
+  },
+  {
+    id: '#210522',
+    name: 'TC #544426',
+    image: '/img/axie/axie-green.png',
+    attributes: [40, 56, 60, 90],
+    team: 'Jamac(K01)',
+    breedCount: '4/7',
+    text: 100,
+    axieClass: 'aquatic',
+    stage: 1,
+  },
+  {
+    id: '#210523',
+    name: 'TC #544426',
+    image: '/img/axie/axie-yellow.png',
+    attributes: [40, 56, 60, 90],
+    team: 'Jamac(K01)',
+    breedCount: '4/7',
+    text: 100,
+    axieClass: 'aquatic',
+    stage: 1,
+  },
 ];

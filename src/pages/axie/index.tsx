@@ -7,7 +7,7 @@ import {
   Stack,
   Image,
   Grid,
-  Checkbox
+  Checkbox,
 } from '@chakra-ui/react';
 import Layout from '~/components/Layout';
 import Card from '~/components/Axie/Card';
@@ -18,7 +18,7 @@ const Axie = () => {
   return (
     <Layout>
       <SimpleGrid spacing="6" columns={3} mb="24px">
-        <Box bg="white" px={8} py={6} borderRadius="16px">
+        <Box bg="white" px={8} py={6} borderRadius="2xl">
           <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="24px">
             Total
           </Text>
@@ -28,7 +28,7 @@ const Axie = () => {
             </Text>
           </Stack>
         </Box>
-        <Box bg="white" px={8} py={6} borderRadius="16px">
+        <Box bg="white" px={8} py={6} borderRadius="2xl">
           <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="24px">
             Egg
           </Text>
@@ -42,11 +42,13 @@ const Axie = () => {
               </Text>
             </Stack>
             <Stack>
-              <Text fontSize="xs" color="yellow">#210520</Text>
+              <Text fontSize="xs" color="yellow">
+                #210520
+              </Text>
             </Stack>
           </Stack>
         </Box>
-        <Box bg="white" px={8} py={6} borderRadius="16px">
+        <Box bg="white" px={8} py={6} borderRadius="2xl">
           <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="24px">
             Ready to hatch
           </Text>
@@ -60,23 +62,43 @@ const Axie = () => {
               </Text>
             </Stack>
             <Stack>
-              <Text fontSize="xs" color="yellow">#210520</Text>
+              <Text fontSize="xs" color="yellow">
+                #210520
+              </Text>
             </Stack>
           </Stack>
         </Box>
       </SimpleGrid>
-      <Flex
-        bg="white"
-        borderRadius="3xl"
-      >
+      <Flex bg="white" borderRadius="3xl" overflow="hidden">
         <Filter />
-        <SimpleGrid spacing="6" p="8" columns={2}>
-          {
-            axies.map(item => (
+        <Box flex="1">
+          <Text p="8" fontSize="xs" color="#25273499" pb="6">
+            140 Axies
+          </Text>
+          <SimpleGrid
+            p="8"
+            spacing="6"
+            maxH="518px"
+            overflowY="auto"
+            minChildWidth="330px"
+            css={{
+              '&::-webkit-scrollbar': {
+                width: '4px',
+              },
+              '&::-webkit-scrollbar-track': {
+                width: '6px',
+              },
+              '&::-webkit-scrollbar-thumb': {
+                background: '#E4E4E4',
+                borderRadius: '4px',
+              },
+            }}
+          >
+            {axies.map((item) => (
               <Card key={item.id} {...item} />
-            ))
-          }
-        </SimpleGrid>
+            ))}
+          </SimpleGrid>
+        </Box>
       </Flex>
     </Layout>
   );

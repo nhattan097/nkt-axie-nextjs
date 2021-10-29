@@ -15,7 +15,7 @@ import { IoCaretDown, IoExit, IoPersonSharp } from 'react-icons/io5';
 import Link from 'next/link';
 import routes from '~/data/routes';
 
-const Header = ({ name }) => {
+const Header = () => {
   const { pathname } = useRouter();
   const title = routes.find((route) => route.url === pathname).title;
 

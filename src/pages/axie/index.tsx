@@ -12,7 +12,7 @@ import {
   Checkbox
 } from '@chakra-ui/react';
 import Layout from '~/components/Layout';
-import Card from './components/Card';
+import Card from '~/components/Axie/Card';
 
 const Axie = () => {
   const items = [
@@ -97,7 +97,7 @@ const Axie = () => {
   ];
 
   return (
-    <Layout name="Axie List">
+    <Layout>
       <Flex
         bg="white"
         borderRadius="3xl"
@@ -136,12 +136,13 @@ const Axie = () => {
             {
               classes.map(item => (
                 <Checkbox
+                  key={item.name}
                   colorScheme="blackAlpha"
                   size="lg"
                   w="50%"
                   mb="8px"
                 >
-                  <Image src={item.image} />
+                  <Image src={item.icon} />
                   <Text fontSize="sm">{item.name}</Text>
                 </Checkbox>
               ))
@@ -159,6 +160,7 @@ const Axie = () => {
             {
               stages.map(item => (
                 <Checkbox
+                  key={item.name}
                   colorScheme="blackAlpha"
                   size="lg"
                   w="50%"

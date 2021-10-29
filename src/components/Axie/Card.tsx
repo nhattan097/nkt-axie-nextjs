@@ -123,7 +123,7 @@ const Card = (props) => {
           >
             {id}
           </Badge>
-          <Text mb="8" fontWeight="bold" fontSize="sm" mb="16px">
+          <Text fontWeight="bold" fontSize="sm" mb="16px">
             {name}
           </Text>
           <HStack spacing="10px">

@@ -20,7 +20,13 @@ import Link from 'next/link';
 
 const LeftPage = () => {
   return (
-    <Box py="50px" px="80px" w="half">
+    <Flex
+      py="50px"
+      px="80px"
+      w="half"
+      justify="space-between"
+      direction="column"
+    >
       <Flex alignItems="center" justifyContent="space-between" mb="130px">
         <Image alt="" src="/img/logo/nkt-logo.png" w="150px" h="40px" />
         <HStack spacing="6">
@@ -29,117 +35,119 @@ const LeftPage = () => {
           <Icon w="7" h="7" as={IoLogoYoutube} />
         </HStack>
       </Flex>
-      <Heading fontSize="4xl" mb="60px" fontWeight="semibold">
-        An NFT is a unit of data stored on a digital ledger
-      </Heading>
-      <Flex borderRadius="24px" bg="white" maxW="505px" mb="64px">
-        <Box px="20px" py="30px" flex="1">
-          <Flex align="center" justify="start" mb="4">
-            <Box
-              w="16px"
-              height="16px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              bg="#286EF3"
-              borderRadius="6px"
-              mr="2"
+      <Box>
+        <Heading fontSize="4xl" mb="60px" fontWeight="semibold">
+          An NFT is a unit of data stored on a digital ledger
+        </Heading>
+        <Flex borderRadius="24px" bg="white" maxW="505px" mb="64px">
+          <Box px="20px" py="30px" flex="1">
+            <Flex align="center" justify="start" mb="4">
+              <Box
+                w="16px"
+                height="16px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="#286EF3"
+                borderRadius="6px"
+                mr="2"
+              >
+                <Icon as={IoPerson} fill="white" w="8px" h="8px" />
+              </Box>
+              <Text color="#808191" fontSize="xs">
+                Scholar
+              </Text>
+            </Flex>
+            <Text
+              color="number"
+              fontSize="4xl"
+              fontWeight="semibold"
+              lineHeight="none"
             >
-              <Icon as={IoPerson} fill="white" w="8px" h="8px" />
-            </Box>
-            <Text color="#808191" fontSize="xs">
-              Scholar
+              101
             </Text>
-          </Flex>
-          <Text
-            color="number"
-            fontSize="4xl"
-            fontWeight="semibold"
-            lineHeight="none"
-          >
-            101
-          </Text>
-        </Box>
-        <Box px="20px" py="30px" flex="1" borderX="1px solid #E4E4E4">
-          <Flex align="center" justify="start" mb="4">
-            <Image
-              alt=""
-              src="/svg/message-unread.svg"
-              w="16px"
-              height="16px"
-              mr="2"
-            />
-            <Text color="#808191" fontSize="xs">
-              SLP Average
-            </Text>
-          </Flex>
-          <Text
-            color="number"
-            fontSize="4xl"
-            fontWeight="semibold"
-            lineHeight="none"
-          >
-            150
-          </Text>
-        </Box>
-        <Box px="20px" py="30px" flex="1">
-          <Flex align="center" justify="start" mb="4">
-            <Box
-              w="16px"
-              height="16px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              bg="purple"
-              borderRadius="6px"
-              mr="2"
+          </Box>
+          <Box px="20px" py="30px" flex="1" borderX="1px solid #E4E4E4">
+            <Flex align="center" justify="start" mb="4">
+              <Image
+                alt=""
+                src="/svg/message-unread.svg"
+                w="16px"
+                height="16px"
+                mr="2"
+              />
+              <Text color="#808191" fontSize="xs">
+                SLP Average
+              </Text>
+            </Flex>
+            <Text
+              color="number"
+              fontSize="4xl"
+              fontWeight="semibold"
+              lineHeight="none"
             >
-              <Icon as={IoStatsChart} fill="white" w="8px" h="8px" />
-            </Box>
-            <Text color="#808191" fontSize="xs">
-              Top Player Rank
+              150
             </Text>
-          </Flex>
-          <Text
-            color="number"
-            fontSize="4xl"
-            fontWeight="semibold"
-            lineHeight="none"
-          >
-            1200
-          </Text>
-        </Box>
-      </Flex>
-      <HStack maxW="505px" spacing="16px" mb="155px">
-        <Button
-          borderRadius="2xl"
-          h="16"
-          color="white"
-          bg="primaryDark"
-          flex="1"
-          _hover={{ color: 'primaryDark', bg: 'gray.200' }}
-        >
-          Apply Now
-        </Button>
-        <Link href="/dashboard" passHref>
+          </Box>
+          <Box px="20px" py="30px" flex="1">
+            <Flex align="center" justify="start" mb="4">
+              <Box
+                w="16px"
+                height="16px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="purple"
+                borderRadius="6px"
+                mr="2"
+              >
+                <Icon as={IoStatsChart} fill="white" w="8px" h="8px" />
+              </Box>
+              <Text color="#808191" fontSize="xs">
+                Top Player Rank
+              </Text>
+            </Flex>
+            <Text
+              color="number"
+              fontSize="4xl"
+              fontWeight="semibold"
+              lineHeight="none"
+            >
+              1200
+            </Text>
+          </Box>
+        </Flex>
+        <HStack maxW="505px" spacing="16px" mb="155px">
           <Button
             borderRadius="2xl"
             h="16"
-            border="1px"
-            borderColor="primaryDark"
+            color="white"
+            bg="primaryDark"
             flex="1"
-            bg="transparent"
+            _hover={{ color: 'primaryDark', bg: 'gray.200' }}
           >
-            Login
+            Apply Now
           </Button>
-        </Link>
-      </HStack>
+          <Link href="/dashboard" passHref>
+            <Button
+              borderRadius="2xl"
+              h="16"
+              border="1px"
+              borderColor="primaryDark"
+              flex="1"
+              bg="transparent"
+            >
+              Login
+            </Button>
+          </Link>
+        </HStack>
+      </Box>
       <HStack spacing="40px">
         <Image w="76px" alt="" src="/img/logo/axie-logo.png" />
         <Image w="61px" alt="" src="/img/logo/gala-logo.png" />
         <Image w="120px" alt="" src="/img/logo/treeverse-logo.png" />
       </HStack>
-    </Box>
+    </Flex>
   );
 };
 

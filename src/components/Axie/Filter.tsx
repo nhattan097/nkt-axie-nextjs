@@ -82,13 +82,7 @@ const Filter = () => {
           Class
         </Text>
         {classes.map((item) => (
-          <Checkbox
-            key={item.name}
-            colorScheme="blackAlpha"
-            size="lg"
-            w="50%"
-            mb="8px"
-          >
+          <Checkbox key={item.name} size="lg" w="50%" mb="8px">
             <HStack>
               <Image src={item.icon} alt="" />
               <Text fontSize="sm">{item.name}</Text>
@@ -101,13 +95,7 @@ const Filter = () => {
           Stage
         </Text>
         {stages.map((item) => (
-          <Checkbox
-            key={item.name}
-            colorScheme="blackAlpha"
-            size="lg"
-            w="50%"
-            mb="8px"
-          >
+          <Checkbox key={item.name} size="lg" w="50%" mb="8px">
             <Text fontSize="sm">{item.name}</Text>
           </Checkbox>
         ))}

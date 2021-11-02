@@ -112,7 +112,7 @@ const Dashboard = () => {
                     gridTemplateAreas={{
                       base: `'total scholar slp_average' 'total top_5 worst_5'`,
                     }}
-                    gap={4}
+                    gap={6}
                     lineHeight="none"
                   >
                     <CardBgTotal

@@ -45,21 +45,26 @@ const Dashboard = () => {
             <Tabs>
               <Flex mb="6" justify="space-between" align="center">
                 <TabList border="none" color="#B7B9BD">
-                  {tabs.map((tab) => (
-                    <Tab
-                      key={tab.id}
-                      _selected={{
-                        color: 'primaryDark',
-                        borderBottom: '4px',
-                        borderColor: 'primaryDark',
-                        boxShadow: 'none',
-                      }}
-                      fontSize="xl"
-                      fontWeight="bold"
-                    >
-                      {tab.label}
-                    </Tab>
-                  ))}
+                  <HStack spacing="6">
+                    {tabs.map((tab) => (
+                      <Tab
+                        key={tab.id}
+                        _selected={{
+                          color: 'primaryDark',
+                          borderBottom: '4px',
+                          borderColor: 'primaryDark',
+                          boxShadow: 'none',
+                        }}
+                        fontSize="sm"
+                        fontWeight="bold"
+                        px="0"
+                        pt="0"
+                        pb="1"
+                      >
+                        {tab.label}
+                      </Tab>
+                    ))}
+                  </HStack>
                 </TabList>
                 <Menu>
                   {({ isOpen }) => (

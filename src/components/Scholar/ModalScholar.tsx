@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import {
   Flex,
   Text,
@@ -23,8 +24,10 @@ import {
 import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
 
 const ModalScholar = ({ isOpen, onClose }) => {
+  const initialRef = useRef();
   return (
     <Modal
+      initialFocusRef={initialRef}
       isCentered
       returnFocusOnClose={false}
       isOpen={isOpen}
@@ -33,7 +36,7 @@ const ModalScholar = ({ isOpen, onClose }) => {
     >
       <ModalOverlay />
       <ModalContent borderRadius="3xl">
-        <ModalHeader px="8" py="6" pb="0">
+        <ModalHeader fontWeight="bold" px="8" py="6" pb="0">
           Add New Scholar
         </ModalHeader>
         <ModalCloseButton
@@ -125,6 +128,7 @@ const ModalScholar = ({ isOpen, onClose }) => {
                 Ronin Address
               </FormLabel>
               <Input
+                ref={initialRef}
                 _focus={{
                   boxShadow: 'none',
                   border: '2px',

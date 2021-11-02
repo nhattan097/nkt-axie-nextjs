@@ -13,7 +13,10 @@ const colors = {
   brown: '#B34540',
   lightBrown: 'rgba(179, 69, 64, 0.1)',
   secondaryText: 'rgba(37, 39, 52, 0.6)',
-  border: '#B7B9BD'
+  border: '#B7B9BD',
+  dark: {
+    500: '#252734',
+  },
 };
 
 export default colors;

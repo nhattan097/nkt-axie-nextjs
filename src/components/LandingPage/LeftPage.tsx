@@ -7,6 +7,8 @@ import {
   Image,
   Button,
   HStack,
+  Center,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import {
   IoLogoDiscord,
@@ -35,11 +37,16 @@ const LeftPage = () => {
           <Icon w="7" h="7" as={IoLogoYoutube} />
         </HStack>
       </Flex>
-      <Box>
-        <Heading fontSize="4xl" mb="60px" fontWeight="semibold">
+      <Center flexDirection="column">
+        <Heading
+          textAlign="center"
+          fontSize="4xl"
+          mb="60px"
+          fontWeight="semibold"
+        >
           An NFT is a unit of data stored on a digital ledger
         </Heading>
-        <Flex borderRadius="24px" bg="white" maxW="505px" mb="64px">
+        <Flex borderRadius="24px" bg="white" minW="505px" mb="64px">
           <Box px="20px" py="30px" flex="1">
             <Flex align="center" justify="start" mb="4">
               <Box
@@ -117,7 +124,7 @@ const LeftPage = () => {
             </Text>
           </Box>
         </Flex>
-        <HStack maxW="505px" spacing="16px" mb="155px">
+        <SimpleGrid minChildWidth="240px" maxW="505px" gap="4" mb="155px">
           <Button
             borderRadius="2xl"
             h="16"
@@ -140,8 +147,8 @@ const LeftPage = () => {
               Login
             </Button>
           </Link>
-        </HStack>
-      </Box>
+        </SimpleGrid>
+      </Center>
       <HStack spacing="40px">
         <Image w="76px" alt="" src="/img/logo/axie-logo.png" />
         <Image w="61px" alt="" src="/img/logo/gala-logo.png" />

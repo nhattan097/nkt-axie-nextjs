@@ -5,8 +5,18 @@ import {
   Image,
   Button,
   Checkbox,
-  Divider,
+  VStack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  FormControl,
+  FormLabel,
+  Icon,
+  Stack,
 } from '@chakra-ui/react';
+import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
+
 import Breed from '~/components/Axie/Breed';
 
 const Filter = () => {
@@ -68,8 +78,15 @@ const Filter = () => {
   ];
 
   return (
-    <Box bg="white" maxWidth={282} p="8" borderRight="1px solid #E4E4E4">
-      <HStack justify="space-between" mb="24px">
+    <Stack
+      spacing="6"
+      bg="white"
+      maxWidth={282}
+      p="8"
+      borderRight="1px solid #E4E4E4"
+      direction="column"
+    >
+      <HStack justify="space-between">
         <Text color="primaryDark" fontWeight="bold" fontSize="xl">
           Filter
         </Text>
@@ -77,8 +94,82 @@ const Filter = () => {
           Clean Filter
         </Button>
       </HStack>
-      <Box mb="24px">
-        <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="16px">
+      <VStack spacing="6">
+        <FormControl id="email">
+          <FormLabel fontSize="xs" fontWeight="bold" color="secondaryText">
+            Manager
+          </FormLabel>
+          <Menu>
+            {({ isOpen }) => (
+              <>
+                <MenuButton
+                  as={Button}
+                  w="full"
+                  h="48px"
+                  borderRadius="lg"
+                  fontWeight="normal"
+                  fontSize="sm"
+                  _focus={{ boxShadow: 'none' }}
+                  bg="primaryLight"
+                  textAlign="left"
+                  rightIcon={<Icon as={isOpen ? IoChevronUp : IoChevronDown} />}
+                >
+                  Select a Manager
+                </MenuButton>
+                <MenuList fontSize="sm" p="2" w="full">
+                  <MenuItem minHeight="40px" borderRadius="md">
+                    Faction K
+                  </MenuItem>
+                  <MenuItem minHeight="40px" borderRadius="md">
+                    Faction G
+                  </MenuItem>
+                  <MenuItem minHeight="40px" borderRadius="md">
+                    Faction H
+                  </MenuItem>
+                </MenuList>
+              </>
+            )}
+          </Menu>
+        </FormControl>
+        <FormControl id="email">
+          <FormLabel fontSize="xs" fontWeight="bold" color="secondaryText">
+            Owner
+          </FormLabel>
+          <Menu>
+            {({ isOpen }) => (
+              <>
+                <MenuButton
+                  as={Button}
+                  w="full"
+                  h="48px"
+                  borderRadius="lg"
+                  fontWeight="normal"
+                  fontSize="sm"
+                  _focus={{ boxShadow: 'none' }}
+                  bg="primaryLight"
+                  textAlign="left"
+                  rightIcon={<Icon as={isOpen ? IoChevronUp : IoChevronDown} />}
+                >
+                  Select a Owner
+                </MenuButton>
+                <MenuList fontSize="sm" p="2" w="full">
+                  <MenuItem minHeight="40px" borderRadius="md">
+                    Investor A
+                  </MenuItem>
+                  <MenuItem minHeight="40px" borderRadius="md">
+                    Investor B
+                  </MenuItem>
+                  <MenuItem minHeight="40px" borderRadius="md">
+                    None
+                  </MenuItem>
+                </MenuList>
+              </>
+            )}
+          </Menu>
+        </FormControl>
+      </VStack>
+      <Box>
+        <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="2">
           Class
         </Text>
         {classes.map((item) => (
@@ -90,8 +181,8 @@ const Filter = () => {
           </Checkbox>
         ))}
       </Box>
-      <Box mb="24px">
-        <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="16px">
+      <Box>
+        <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="2">
           Stage
         </Text>
         {stages.map((item) => (
@@ -101,12 +192,12 @@ const Filter = () => {
         ))}
       </Box>
       <Box>
-        <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="16px">
+        <Text fontSize="xs" fontWeight="bold" color="secondaryText" mb="2">
           Breed
         </Text>
         <Breed />
       </Box>
-    </Box>
+    </Stack>
   );
 };
 

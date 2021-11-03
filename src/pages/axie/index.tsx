@@ -18,6 +18,8 @@ import {
   TabPanels,
   TabPanel,
 } from '@chakra-ui/react';
+import { FiEdit2 } from 'react-icons/fi';
+
 import Layout from '~/components/Layout';
 import Filter from '~/components/Axie/Filter';
 import { axie_list_table } from '~/data/sample';
@@ -135,7 +137,7 @@ const Axie = () => {
                 <Table
                   display="grid"
                   overflowY="auto"
-                  maxH="520px"
+                  maxH="621px"
                   px="8"
                   py="0"
                   variant="simple"
@@ -155,7 +157,7 @@ const Axie = () => {
                   <Thead display="grid" position="sticky" top="0" bg="white">
                     <Tr
                       display="grid"
-                      gridTemplateColumns="1.2fr 0.5fr 0.8fr 0.9fr 0.8fr 0.5fr 0.5fr"
+                      gridTemplateColumns="1fr 0.5fr 0.7fr 0.6fr 0.5fr 0.6fr 0.5fr"
                       fontSize="xs"
                     >
                       <Th px="0" py="3" fontWeight="normal" color="#25273499">
@@ -219,7 +221,7 @@ const Axie = () => {
                       return (
                         <Tr
                           display="grid"
-                          gridTemplateColumns="1.2fr 0.5fr 0.8fr 0.9fr 0.8fr 0.5fr 0.5fr"
+                          gridTemplateColumns="1fr 0.5fr 0.7fr 0.6fr 0.5fr 0.6fr 0.5fr"
                           key={id}
                           fontSize="xs"
                           cursor="pointer"
@@ -269,7 +271,10 @@ const Axie = () => {
                             {manager}
                           </Td>
                           <Td px="0" py="3" isNumeric>
-                            {owner}
+                            <HStack justify="flex-end" spacing="2">
+                              <Text>{owner}</Text>
+                              <FiEdit2 />
+                            </HStack>
                           </Td>
                         </Tr>
                       );

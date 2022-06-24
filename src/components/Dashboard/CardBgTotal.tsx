@@ -1,0 +1,81 @@
+import { Box, Image } from '@chakra-ui/react';
+
+const CardBgTotal = ({
+  borderRadius,
+  h,
+  gridArea,
+  bg,
+  px,
+  pt,
+  pb,
+  position,
+  children,
+}) => {
+  return (
+    <Box
+      borderRadius={borderRadius}
+      h={h}
+      gridArea={gridArea}
+      bg={bg}
+      px={px}
+      pt={pt}
+      pb={pb}
+      position={position}
+    >
+      <Image
+        position="absolute"
+        top="0"
+        right="0"
+        alt=""
+        src="/svg/triangle-small.svg"
+        borderRadius="2xl"
+      />
+      <Image
+        position="absolute"
+        bottom="0"
+        right="0"
+        alt=""
+        src="/svg/rectangle-small.svg"
+        borderRadius="2xl"
+      />
+      <Image
+        position="absolute"
+        bottom="95px"
+        left="0"
+        alt=""
+        src="/svg/dots-small.svg"
+      />
+      <Image
+        position="absolute"
+        top="86px"
+        right="38px"
+        alt=""
+        src="/svg/coin-bg-small.svg"
+      />
+      <Image
+        position="absolute"
+        top="157px"
+        right="90px"
+        alt=""
+        src="/svg/coin-bg-small.svg"
+      />
+      <Image
+        position="absolute"
+        bottom="157px"
+        right="50px"
+        alt=""
+        src="/svg/coin-bg-medium.svg"
+      />
+      <Image
+        position="absolute"
+        bottom="37px"
+        right="52px"
+        alt=""
+        src="/svg/coin-bg-big.svg"
+      />
+      {children}
+    </Box>
+  );
+};
+
+export default CardBgTotal;

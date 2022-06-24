@@ -4,8 +4,8 @@ import SwiperCore, { Pagination } from 'swiper';
 
 import { Pet } from '~/interfaces/pet';
 import { Player } from '~/interfaces/player';
-import CardPlayer from '~/components/CardPlayer';
-import CardAxie from '~/components/CardAxie';
+import CardPlayer from '~/components/LandingPage/CardPlayer';
+import CardAxie from '~/components/LandingPage/CardAxie';
 import { best_players, best_team } from '~/data/sample';
 
 // install Swiper modules
@@ -72,8 +72,8 @@ const RightPage = () => {
         }}
       >
         <SwiperSlide>
-          <Box>
-            <Center my="130px" flexDirection="column">
+          <Center h="full">
+            <Center flexDirection="column">
               <Heading fontSize="2xl" mb="48px" fontWeight="700">
                 Best Team of the month
               </Heading>
@@ -84,11 +84,11 @@ const RightPage = () => {
                 ))}
               </Grid>
             </Center>
-          </Box>
+          </Center>
         </SwiperSlide>
         <SwiperSlide>
-          <Box>
-            <Center mt="130px" flexDirection="column">
+          <Center h="full">
+            <Center flexDirection="column">
               <Heading fontSize="2xl" mb="64px" fontWeight="bold">
                 Top 3 best player
               </Heading>
@@ -98,7 +98,7 @@ const RightPage = () => {
                 ))}
               </Grid>
             </Center>
-          </Box>
+          </Center>
         </SwiperSlide>
       </Swiper>
     </Box>
